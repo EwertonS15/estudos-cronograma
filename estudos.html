@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cronograma de Estudos - Ewerton Santos</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 80px;
+    /* Fundo com imagem + overlay escura */
+    background:
+      linear-gradient(rgba(10,10,30,0.75), rgba(10,10,30,0.75)),
+      url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #eee;
+  }
+  header {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin: 0;
+    color: #9c8de3;
+  }
+  header p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  main {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+    gap: 30px;
+    background: rgba(20, 20, 40, 0.85);
+    border-radius: 16px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  }
+  section {
+    background: rgba(30, 30, 55, 0.9);
+    box-shadow: 0 10px 25px rgba(90,45,130,0.4);
+    border-radius: 16px;
+    padding: 25px 30px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+  }
+  section:hover {
+    box-shadow: 0 15px 35px rgba(90,45,130,0.6);
+  }
+  section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #bfb7f7;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  section h2 svg {
+    width: 28px;
+    height: 28px;
+    fill: #bfb7f7;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #ddd;
+    cursor: pointer;
+    margin-bottom: 14px;
+    user-select: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  label:hover {
+    color: #cbbff3;
+  }
+  input[type="checkbox"] {
+    margin-right: 15px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: #9c8de3;
+    transition: transform 0.2s ease;
+  }
+  input[type="checkbox"]:checked {
+    transform: scale(1.2);
+  }
+  .actions {
+    grid-column: 1/-1;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .btn {
+    background: #9c8de3;
+    color: #222;
+    border: none;
+    padding: 15px 35px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 0 10px;
+    box-shadow: 0 6px 15px rgba(156,141,227,0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn:hover {
+    background: #b2a1f7;
+    box-shadow: 0 8px 25px rgba(178,161,247,0.7);
+  }
+  footer {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    color: #bbb;
+    font-size: 0.95rem;
+  }
+  footer a {
+    color: #b2a1f7;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+  }
+  footer a:hover {
+    color: #d5cefb;
+    text-decoration: underline;
+  }
+  @media (max-width: 480px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cronograma de Estudos - Ewerton Santos</h1>
+  <p>Estudante de Análise e Desenvolvimento de Sistemas | Plano de estudos para programação</p>
+</header>
+<main>
+  <section data-week="1-2">
+    <h2>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      Semana 1 e 2 – Fundamentos de Lógica
+    </h2>
+    <label><input type="checkbox" data-key="sem1_fund1" /> Lógica de programação e algoritmos</label>
+    <label><input type="checkbox" data-key="sem1_fund2" /> Variáveis, operadores e entrada/saída</label>
+    <label><input type="checkbox" data-key="sem1_fund3" /> Condições e repetição (se, para, enquanto)</label>
+    <label><input type="checkbox" data-key="sem1_fund4" /> Exercícios práticos com Visualg</label>
+  </section>
+  <section data-week="3-4">
+    <h2>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      Semana 3 e 4 – Início com Python
+    </h2>
+    <label><input type="checkbox" data-key="sem3_py1" /> Sintaxe básica (print, input)</label>
+    <label><input type="checkbox" data-key="sem3_py2" /> Condicionais e laços</label>
+    <label><input type="checkbox" data-key="sem3_py3" /> Funções</label>
+    <label><input type="checkbox" data-key="sem3_py4" /> Exercícios: média, pares, etc.</label>
+  </section>
+  <section data-week="5">
+    <h2>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      Semana 5 – Banco de Dados
+    </h2>
+    <label><input type="checkbox" data-key="sem5_db1" /> Conceitos básicos de SQL</label>
+    <label><input type="checkbox" data-key="sem5_db2" /> Consultas (select, insert, update)</label>
+    <label><input type="checkbox" data-key="sem5_db3" /> Criar tabelas e relacionamentos</label>
+  </section>
+  <section data-week="6">
+    <h2>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      Semana 6 – Projeto Prático 1
+    </h2>
+    <label><input type="checkbox" data-key="sem6_proj1" /> Sistema simples com menu</label>
+    <label><input type="checkbox" data-key="sem6_proj2" /> Cadastro, listagem, edição e exclusão</label>
+    <label><input type="checkbox" data-key="sem6_proj3" /> Usar listas ou arquivos txt</label>
+  </section>
+  <section data-week="7">
+    <h2>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      Semana 7 – Git e GitHub
+    </h2>
+    <label><input type="checkbox" data-key="sem7_git1" /> Criar conta no GitHub</label>
+    <label><input type="checkbox" data-key="sem7_git2" /> Aprender comandos básicos do Git</label>
+    <label><input type="checkbox" data-key="sem7_git3" /> Subir projetos para o GitHub</label>
+  </section>
+  <section data-week="8">
+    <h2>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      Semana 8 – Projeto Final e Portfólio
+    </h2>
+    <label><input type="checkbox" data-key="sem8_final1" /> Refaça e melhore projetos</label>
+    <label><input type="checkbox" data-key="sem8_final2" /> Criar README para os projetos</label>
+    <label><input type="checkbox" data-key="sem8_final3" /> Montar portfólio online</label>
+  </section>
+
+  <div class="actions">
+    <a href="sandbox:/mnt/data/Cronograma_Estudios_Ewerton.pdf" class="btn" download>📥 Baixar PDF do cronograma</a>
+    <button class="btn" id="resetBtn" title="Limpar todas as marcações">🔄 Reiniciar checklist</button>
+  </div>
+</main>
+<footer>
+  <p>Contato: <a href="https://linkedin.com/in/ewertonsantos" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="mailto:ewerton@example.com">Email</a></p>
+</footer>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const STORAGE_KEY = 'ewerton_cronograma_checklist';
+
+  function saveState() {
+    const state = {};
+    checkboxes.forEach(cb => {
+      state[cb.dataset.key] = cb.checked;
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function loadState() {
+    const state = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if (!state) return;
+    checkboxes.forEach(cb => {
+      if(state.hasOwnProperty(cb.dataset.key)) {
+        cb.checked = state[cb.dataset.key];
+      }
+    });
+  }
+
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      cb.style.transform = cb.checked ? 'scale(1.2)' : 'scale(1)';
+      saveState();
+    });
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    if(confirm('Tem certeza que deseja reiniciar todas as marcações?')) {
+      checkboxes.forEach(cb => {
+        cb.checked = false;
+        cb.style.transform = 'scale(1)';
+      });
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  });
+
+  loadState();
+</script>
+</body>
+</html>
